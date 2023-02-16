@@ -38,16 +38,16 @@ app.get("/", (req, res) => {
   //     res.send(str);
   //   }
   // });
-  res.render('home');
+  res.render('pages/home');
 });
 app.get('/hello/:name', (req, res) => {
   const data = {
     name: req.params.name,
   }
-  res.render('hello', data);
+  res.render('pages/hello', data);
 })
 app.get('/posts', (req, res) => {
-  res.render('post-list', { posts: articles });
+  res.render('pages/post-list', { posts: articles });
 })
 app.listen(port, () => {
   console.log(`Server Start to http://localhost/:${port} !`)

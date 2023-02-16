@@ -1,5 +1,7 @@
+<%- include('../template/header.ejs') %>
 <h1>Hello my friend <%= name.toUpperCase() %>!</h1>
 
 <% if(name.length < 2) { %>
     <h2>That's a short name!</h2>}
 <% } %>
+<%- include('../template/footer.ejs') %>
